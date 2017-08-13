@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/common.css')}}">>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main.css')}}">>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.min.css')}}">>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='js/libs/modernizr.min.js')}}">>
+</head>
+<body>
+	<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">welcome</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					
+				</div>
+				
+			</nav>
+			<div class="jumbotron">
+				<h1>
+					作业未交查询
+				</h1>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+			</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							学号
+						</th>
+						<th>
+							姓名
+						</th>
+						<th>
+							班级
+						</th>
+						<th>
+							年级
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+			
+				{% for entry in entries %}
+					<tr>
+						<td>
+						{{ entry[0] }}
+						</td>
+						<td>
+						{{ entry[1] }}
+						</td>
+						<td>
+						{{ entry[2] }}班
+						</td>
+						<td>
+							{{ entry[3] }}年级
+						</td>
+					</tr>
+					{% endfor %}
+	
+				</tbody>
+			</table>
+
+
+  
+</body>
+</html>
